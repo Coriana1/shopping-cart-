@@ -6,18 +6,6 @@ background-attachment: fixed;
 font-family: 'Signika Negative', sans-serif;
 }
 
-main {
-    
-    border: 1px inset;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    line-height: 1.5em;
-    margin: 1.5em 1.5em 2.5em;
-    min-height: calc(100% - 9.5em);
-    height: auto !important;
-    text-shadow: white -1px 1px;
-  }
 
   body>header {
     overflow: hidden;
