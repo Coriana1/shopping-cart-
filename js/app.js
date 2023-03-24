@@ -1,12 +1,6 @@
 'use strict';
 
-// State object keeps track of the application state (all available products and current state of the user's cart)
-const state = {
-  allProducts: [],
-  cart: null,
-};
-
-// Cart constructor./
+// Cart constructor.
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
@@ -31,12 +25,15 @@ Cart.prototype.removeItem = function(item) {
   this.items.splice(item, 1);
 };
 
+<<<<<<< HEAD
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
   const itemCount = document.getElementById('itemCount');
   itemCount.textContent = this.items.length;
 };
 
+=======
+>>>>>>> ba1941ae80033db126acc4b2ab48ca364e57d21b
 const CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
@@ -46,31 +43,33 @@ const CartItem = function(product, quantity) {
 const Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
+  Product.allProducts.push(this);
 };
+Product.allProducts = [];
 
 function generateCatalog() {
-  let bag = new Product('assets/bag.jpg', 'Bag');
-  let banana = new Product('assets/banana.jpg', 'Banana');
-  let bathroom = new Product('assets/bathroom.jpg', 'Bathroom');
-  let boots = new Product('assets/boots.jpg', 'Boots');
-  let breakfast = new Product('assets/breakfast.jpg', 'Breakfast');
-  let bubblegum = new Product('assets/bubblegum.jpg', 'Bubblegum');
-  let chair = new Product('assets/chair.jpg', 'Chair');
-  let cthulu = new Product('assets/cthulhu.jpg', 'Cthulhu');
-  let dogDuck = new Product('assets/dog-duck.jpg', 'Dog-Duck');
-  let dragon = new Product('assets/dragon.jpg', 'Dragon');
-  let pen = new Product('assets/pen.jpg', 'Pen');
-  let petSweep = new Product('assets/pet-sweep.jpg', 'Pet Sweep');
-  let scissors = new Product('assets/scissors.jpg', 'Scissors');
-  let shark = new Product('assets/shark.jpg', 'Shark');
-  let sweep = new Product('assets/sweep.png', 'Sweep');
-  let tauntaun = new Product('assets/tauntaun.jpg', 'Taun-Taun');
-  let unicorn = new Product('assets/unicorn.jpg', 'Unicorn');
-  let waterCan = new Product('assets/water-can.jpg', 'Water Can');
-  let wineGlass = new Product('assets/wine-glass.jpg', 'Wine Glass');
-  state.allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, waterCan, wineGlass);
+  new Product('assets/bag.jpg', 'Bag');
+  new Product('assets/banana.jpg', 'Banana');
+  new Product('assets/bathroom.jpg', 'Bathroom');
+  new Product('assets/boots.jpg', 'Boots');
+  new Product('assets/breakfast.jpg', 'Breakfast');
+  new Product('assets/bubblegum.jpg', 'Bubblegum');
+  new Product('assets/chair.jpg', 'Chair');
+  new Product('assets/cthulhu.jpg', 'Cthulhu');
+  new Product('assets/dog-duck.jpg', 'Dog-Duck');
+  new Product('assets/dragon.jpg', 'Dragon');
+  new Product('assets/pen.jpg', 'Pen');
+  new Product('assets/pet-sweep.jpg', 'Pet Sweep');
+  new Product('assets/scissors.jpg', 'Scissors');
+  new Product('assets/shark.jpg', 'Shark');
+  new Product('assets/sweep.png', 'Sweep');
+  new Product('assets/tauntaun.jpg', 'Taun-Taun');
+  new Product('assets/unicorn.jpg', 'Unicorn');
+  new Product('assets/water-can.jpg', 'Water Can');
+  new Product('assets/wine-glass.jpg', 'Wine Glass');
 }
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
 
+console.log(Product.allProducts)
