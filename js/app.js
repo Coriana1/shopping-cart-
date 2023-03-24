@@ -25,15 +25,12 @@ Cart.prototype.removeItem = function(item) {
   this.items.splice(item, 1);
 };
 
-<<<<<<< HEAD
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
   const itemCount = document.getElementById('itemCount');
   itemCount.textContent = this.items.length;
 };
 
-=======
->>>>>>> ba1941ae80033db126acc4b2ab48ca364e57d21b
 const CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
